@@ -34,11 +34,13 @@
       </thead>
       <tbody></tbody>
     </table>
-    <button id="sort-rating-asc" onclick="sortByRating('asc')">Sort by Rating (Ascending)</button>
-    <button id="sort-rating-desc" onclick="sortByRating('desc')">Sort by Rating (Descending)</button>
-    <button id="sort-release-year-asc" onclick="sortByReleaseYear('asc')">Sort by Release Year (Ascending)</button>
-    <button id="sort-release-year-desc" onclick="sortByReleaseYear('desc')">Sort by Release Year (Descending)</button>
-    <button id="color-mode" onclick="toggleColorMode()">Toggle Color Mode</button>
+    <div id="sort-buttons">
+      <button id="sort-rating-asc" onclick="sortByRating('asc')">Sort by Lowest Rated</button>
+      <button id="sort-rating-desc" onclick="sortByRating('desc')">Sort by Highest Rated</button>
+      <button id="sort-release-year-asc" onclick="sortByReleaseYear('asc')">Sort by Newest</button>
+      <button id="sort-release-year-desc" onclick="sortByReleaseYear('desc')">Sort by Oldest</button>
+    </div>
+    <img src="https://nickjohn.gallerycdn.vsassets.io/extensions/nickjohn/autothemeswitcherforwin10darkmode/0.8/1625713621041/Microsoft.VisualStudio.Services.Icons.Default" alt="Toggle color mode" id="color-mode" onclick="toggleColorMode()" />
     <script src="script.js"></script>
   </body>
 </html>

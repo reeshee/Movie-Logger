@@ -52,7 +52,7 @@
   }
   
   #movie-table th {
-    background-color: rgb(69, 184, 43);;
+    background-color: rgb(153, 16, 183);;
   }
   
   #movie-table button {
@@ -96,15 +96,37 @@
   }
 
   body.dark-mode #movie-table th {
-    background-color: rgb(7, 136, 248); /* Dark grey background in dark mode */
+    background-color: rgb(153, 16, 183); /* Dark grey background in dark mode */
   }
   
-  /* Style for the color button */
-  #color-button {
-    background-color: #333;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
+  #sort-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  #sort-buttons button {
+    /* Button styles */
+    border: 1px solid rgb(103, 101, 101); /* Light grey border */
+    border-radius: 8px; /* Rounded edges */
+    background-color: transparent;
+    color: #5887cd; /* Blue text color */
+    font-size: 1em;
     cursor: pointer;
-    border-radius: 5px;
+  }
+  
+  #sort-buttons button:hover {
+    /* Hover styles */
+    color: #0015ff; /* Red hover color */
+  }
+  
+
+  /* Style for the color button */
+  #color-mode {
+    /* Image styles */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px; /* Adjust the width of the image as needed */
+    cursor: pointer;
   }
