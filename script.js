@@ -12,6 +12,12 @@ form.addEventListener('submit', (event) => {
   form.reset();  // Clear the form
 });
 
+// Toggle between light and dark mode
+const colorButton = document.querySelector('#color-button');
+colorButton.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+});
+
 // Load existing movie data from local storage
 const movies = JSON.parse(localStorage.getItem('movies')) || [];
 renderMovies();
