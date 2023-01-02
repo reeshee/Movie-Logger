@@ -1,5 +1,3 @@
-// movie-logger.js
-
 // Handle form submission
 const form = document.querySelector('#movie-form');
 form.addEventListener('submit', (event) => {
@@ -45,9 +43,9 @@ function sortByRating(order) {
 // Sort the movie list by release year
 function sortByReleaseYear(order) {
   if (order === 'asc') {
-    movies.sort((a, b) => a.releaseYear - b.releaseYear);
-  } else {
     movies.sort((a, b) => b.releaseYear - a.releaseYear);
+  } else {
+    movies.sort((a, b) => a.releaseYear - b.releaseYear);
   }
   renderMovies();
 }
