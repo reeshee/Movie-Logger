@@ -32,8 +32,11 @@ function deleteMovie(index) {
   renderMovies();
 }
 
-function sortByRating(a, b) {
-  return b.rating - a.rating;
+function sortByRating() {
+  movies.sort((a, b) => {
+    return b.rating - a.rating;
+  });
+  renderMovies();
 }
 
 function sortByReleaseYear(a, b) {
