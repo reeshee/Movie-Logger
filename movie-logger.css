@@ -1,0 +1,87 @@
+/* movie-logger.css */
+
+body {
+    font-family: sans-serif;
+    background-color: #333;
+    color: white;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  #movie-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #movie-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5em 0;
+  }
+  
+  #movie-form input[type="text"], #movie-form input[type="number"] {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #movie-form button[type="submit"] {
+    margin: 1em 0;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #0066ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #movie-table {
+    width: 80%;
+    margin: 1em auto;
+    border-collapse: collapse;
+  }
+  
+  #movie-table th, #movie-table td {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+  }
+  
+  #movie-table th {
+    background-color: rgb(7, 7, 7);
+  }
+  
+  #movie-table button {
+    background-color: transparent;
+    border: none;
+    color: #e30707;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #movie-table th:nth-child(1), #movie-table td:nth-child(1) {
+    width: 30%;
+  }
+  
+  #movie-table th:nth-child(2), #movie-table td:nth-child(2) {
+    width: 20%;
+  }
+  
+  #movie-table th:nth-child(3), #movie-table td:nth-child(3) {
+    width: 20%;
+  }
+  
+  #movie-table th:nth-child(4), #movie-table td:nth-child(4) {
+    width: 10%;
+  }
+  
