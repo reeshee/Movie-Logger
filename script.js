@@ -33,14 +33,22 @@ function deleteMovie(index) {
 }
 
 // Sort the movie list by rating
-function sortByRating() {
-  movies.sort((a, b) => b.rating - a.rating);
+function sortByRating(order) {
+  if (order === 'asc') {
+    movies.sort((a, b) => a.rating - b.rating);
+  } else {
+    movies.sort((a, b) => b.rating - a.rating);
+  }
   renderMovies();
 }
 
 // Sort the movie list by release year
-function sortByReleaseYear() {
-  movies.sort((a, b) => a.releaseYear - b.releaseYear);
+function sortByReleaseYear(order) {
+  if (order === 'asc') {
+    movies.sort((a, b) => a.releaseYear - b.releaseYear);
+  } else {
+    movies.sort((a, b) => b.releaseYear - a.releaseYear);
+  }
   renderMovies();
 }
 
