@@ -13,10 +13,10 @@ form.addEventListener('submit', (event) => {
 });
 
 // Toggle between light and dark mode
-const colorButton = document.querySelector('#color-button');
-colorButton.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-});
+function toggleColorMode() {
+  // Toggle the "dark-mode" class on the body element
+  document.body.classList.toggle('dark-mode');
+}
 
 // Load existing movie data from local storage
 const movies = JSON.parse(localStorage.getItem('movies')) || [];
