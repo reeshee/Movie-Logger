@@ -12,10 +12,16 @@ form.addEventListener('submit', (event) => {
   form.reset();  // Clear the form
 });
 
-// Toggle between light and dark mode
+// Dark mode toggle
 function toggleColorMode() {
-  // Toggle the "dark-mode" class on the body element
-  document.body.classList.toggle('dark-mode');
+  const body = document.querySelector('body');
+  if (body.classList.contains('light-mode')) {
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+  }
 }
 
 // Load existing movie data from local storage

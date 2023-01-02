@@ -90,16 +90,15 @@ body {
     margin: 0 auto;
     border-radius: 8px;
   }
-
-  body {
-    background-color: #333;
-    color: #fff;
+  
+  body.light-mode {
+    background-color: white;
+    color: black;
   }
   
-  /* Light mode styles */
-  .light-mode {
-    background-color: #fff;
-    color: #333;
+  body.dark-mode {
+    background-color: black;
+    color: white;
   }
   
   /* Style for the color button */
