@@ -32,22 +32,22 @@ function deleteMovie(index) {
   renderMovies();
 }
 
+// Sort the movie list by rating
 function sortByRating() {
-  movies.sort((a, b) => {
-    return b.rating - a.rating;
-  });
+  movies.sort((a, b) => b.rating - a.rating);
   renderMovies();
 }
 
-function sortByReleaseYear(a, b) {
-  return b.releaseYear - a.releaseYear;
+// Sort the movie list by release year
+function sortByReleaseYear() {
+  movies.sort((a, b) => a.releaseYear - b.releaseYear);
+  renderMovies();
 }
 
-function renderMovies(sortFunction) {
-  if (sortFunction) {
-    movies.sort(sortFunction);
-  }
-  // Populate the table with the sorted movies array
+// Render the movie list to the page
+function renderMovies() {
+  const movieTable = document.querySelector('#movie-table tbody');
+  movieTable.innerHTML = '';
   for (let i = 0; i < movies.length; i++) {
     const movie = movies[i];
     const tr = document.createElement('tr');
