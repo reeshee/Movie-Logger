@@ -32,21 +32,17 @@ function deleteMovie(index) {
   renderMovies();
 }
 
-// Render the movie list to the page
-function renderMovies(sortField = '', sortDirection = '') {
-  const movieTable = document.querySelector('#movie-table tbody');
-  movieTable.innerHTML = '';
-  // Sort the movies array
-  if (sortField && sortDirection) {
-    movies.sort((a, b) => {
-      if (sortField === 'name') {
-        return sortDirection === 'asc' ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name);
-      } else if (sortField === 'releaseYear') {
-        return sortDirection === 'asc' ? a.releaseYear - b.releaseYear : b.releaseYear - a.releaseYear;
-      } else if (sortField === 'rating') {
-        return sortDirection === 'asc' ? a.rating - b.rating : b.rating - a.rating;
-      }
-    });
+function sortByRating(a, b) {
+  return b.rating - a.rating;
+}
+
+function sortByReleaseYear(a, b) {
+  return b.releaseYear - a.releaseYear;
+}
+
+function renderMovies(sortFunction) {
+  if (sortFunction) {
+    movies.sort(sortFunction);
   }
   // Populate the table with the sorted movies array
   for (let i = 0; i < movies.length; i++) {
